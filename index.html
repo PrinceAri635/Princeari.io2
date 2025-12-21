@@ -15,7 +15,6 @@ body {
   background: url('backgroundhtml.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #ff00ff;
-  position: relative;
 }
 
 /* Glitter canvas */
@@ -38,7 +37,7 @@ body {
   justify-content: center;
   margin-top: 50px;
   gap: 15px;
-  position: relative;  /* ensure it’s above canvas */
+  position: relative;
   z-index: 1;
 }
 
@@ -48,7 +47,7 @@ body {
   height: auto;
   max-height: 150px;
   border: 3px solid #00ff00;
-  /* border-radius: 50%; */ /* uncomment for circle */
+  /* border-radius: 50%; */
 }
 
 /* Name styling */
@@ -74,17 +73,17 @@ body {
 /* About Me section */
 .about-me {
   margin-top: 30px;
-  color: #ff00ff; /* neon purple text */
+  color: #ff00ff;
   text-align: center;
   font-family: 'UnifrakturCook', cursive;
-  font-size: 25px;
+  font-size: 20px;
   position: relative;
   z-index: 1;
 }
 
 .about-me h2, .about-me p {
-  color: #ff00ff; 
-  -webkit-text-stroke: 1px black; 
+  color: #ff00ff;
+  -webkit-text-stroke: 1px black;
   text-shadow:
     1px 1px 0 #000,
     -1px 1px 0 #000,
@@ -99,7 +98,7 @@ body {
   margin-bottom: 15px;
 }
 
-/* Likes & Dislikes Section */
+/* Likes & Dislikes */
 .likes-dislikes {
   display: flex;
   justify-content: center;
@@ -131,6 +130,34 @@ body {
 
 .likes-dislikes li {
   margin: 4px 0;
+}
+
+/* Quotes Section */
+.quotes {
+  margin-top: 30px;
+  color: #ff00ff;
+  text-align: center;
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.quotes h2, .quotes p {
+  color: #ff00ff;
+  -webkit-text-stroke: 1px black;
+  text-shadow:
+    1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0 0 6px #ff00ff;
+  margin: 5px 0;
+}
+
+.quotes h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
 }
 
 /* Moving text */
@@ -189,10 +216,12 @@ body {
   <p>⋆𝕊𝕖𝕩𝕦𝕒𝕝𝕚𝕥𝕪: Pansexual</p>
   <p>⋆𝕄𝕒𝕛𝕠𝕣 𝕫𝕠𝕕𝕚𝕒𝕔: Taurus Sun / Cancer Moon / Sagittarius Rising</p>
   <p>⋆𝔸𝕘𝕖: 20</p>
-  <p>⋆𝔾𝕖𝕟𝕕𝕖𝕣: Trans masc</p>
+  <p>⋆𝔾𝕖𝕟𝕕𝕖𝕣: Trans Masc</p>
   <p>⋆𝔹𝕚𝕣𝕥𝕙𝕕𝕒𝕪: April 27th</p>
-  <p>⋆𝕃𝕚𝕜𝕖𝕤: Music, glitter, ferrets</p>
-  <p>⋆ℍ𝕠𝕓𝕓𝕚𝕖𝕤: Crocheting, gaming, drawing</p>
+  <p>⋆𝕃𝕚𝕜𝕖𝕤: Music, Glitter, Ferrets</p>
+  <p>⋆ℍ𝕠𝕓𝕓𝕚𝕖𝕤: Crocheting, Gaming, Drawing</p>
+  <h2>Summary</h2>
+  <p>"I live for neon midnights, tangled songs, and sparkles in the dark. – your glitter-soaked prince of the night"</p>
 </div>
 
 <!-- Likes & Dislikes Section -->
@@ -219,6 +248,15 @@ body {
   </div>
 </div>
 
+<!-- Quotes Section -->
+<div class="quotes">
+  <h2>✨ Favorite Quotes ✨</h2>
+  <p>"One day your life will flash before your eyes. Make sure it's worth watching." – Gerard Way</p>
+  <p>"Life gives you many reasons to smile. Your rebellion is one of them." – Andy Biersack</p>
+  <p>"The past isn't a ghost that haunts me; it’s the soil I grew from. Sometimes it’s dark and damp, but that’s where the roots are." – Dorian Bridges</p>
+  <p>"Hope isn’t a soft thing; it’s a jagged, fierce insistence that tomorrow is worth the trouble."</p>
+</div>
+
 <!-- Moving Top Text -->
 <div class="moving-text top">
   <span>✨Prince Ari Lives!✨</span>
@@ -232,11 +270,11 @@ body {
 <!-- Cursor Sparkles -->
 <script src="https://cdn.jsdelivr.net/gh/epistemex/cursor-effects@latest/dist/sparkle.js"></script>
 <script>
-new SparkleCursor({
-  color: "#00ff00",
-  shape: "★",
-  sparkle: true
-});
+  new SparkleCursor({
+    color: "#00ff00",
+    shape: "★",
+    sparkle: true
+  });
 </script>
 
 <!-- Glitter Canvas Script -->
@@ -288,3 +326,4 @@ document.getElementById('playMusic').onclick = () => {
 
 </body>
 </html>
+
