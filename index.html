@@ -39,7 +39,7 @@ body {
   margin-top: 50px;
   gap: 15px;
   position: relative;  /* ensure it’s above canvas */
-  z-index: 1;          /* content above canvas */
+  z-index: 1;
 }
 
 /* Profile picture */
@@ -76,21 +76,21 @@ body {
   margin-top: 30px;
   color: #ff00ff; /* neon purple text */
   text-align: center;
-  font-family: 'UnifrakturCook', cursive; /* gothic/MySpace vibe */
+  font-family: 'UnifrakturCook', cursive;
   font-size: 20px;
   position: relative;
   z-index: 1;
 }
 
 .about-me h2, .about-me p {
-  color: #ff00ff; /* neon purple text */
-  -webkit-text-stroke: 1px black; /* outline for modern browsers */
+  color: #ff00ff; 
+  -webkit-text-stroke: 1px black; 
   text-shadow:
     1px 1px 0 #000,
     -1px 1px 0 #000,
     1px -1px 0 #000,
     -1px -1px 0 #000,
-    0 0 6px #ff00ff; /* glow effect */
+    0 0 6px #ff00ff;
   margin: 5px 0;
 }
 
@@ -110,7 +110,7 @@ body {
 }
 
 .likes-dislikes h3 {
-  color: #00ff00; /* neon green for headings */
+  color: #00ff00;
   font-family: 'UnifrakturCook', cursive;
   text-shadow: 0 0 6px #00ff00, 0 0 12px #9900ff;
   margin-bottom: 10px;
@@ -120,7 +120,7 @@ body {
   list-style-type: disc;
   padding-left: 20px;
   color: #ff00ff;
-  -webkit-text-stroke: 1px black; /* outline for contrast */
+  -webkit-text-stroke: 1px black;
   text-shadow:
     1px 1px 0 #000,
     -1px 1px 0 #000,
@@ -232,11 +232,11 @@ body {
 <!-- Cursor Sparkles -->
 <script src="https://cdn.jsdelivr.net/gh/epistemex/cursor-effects@latest/dist/sparkle.js"></script>
 <script>
-  new SparkleCursor({
-    color: "#00ff00",
-    shape: "★",
-    sparkle: true
-  });
+new SparkleCursor({
+  color: "#00ff00",
+  shape: "★",
+  sparkle: true
+});
 </script>
 
 <!-- Glitter Canvas Script -->
@@ -288,5 +288,3 @@ document.getElementById('playMusic').onclick = () => {
 
 </body>
 </html>
-
-
