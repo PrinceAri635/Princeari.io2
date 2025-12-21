@@ -27,7 +27,7 @@ body {
   z-index: -1;
 }
 
-/* HEADER CONTAINER: everything stacked + centered */
+/* HEADER CONTAINER: profile pic, name, button */
 .header-container {
   display: flex;
   flex-direction: column; /* stack vertically */
@@ -44,7 +44,6 @@ body {
   max-height: 150px;
   border: 3px solid #00ff00;
   /* border-radius: 50%; */ /* uncomment for circle */
-  display: block;
 }
 
 /* Name styling */
@@ -53,3 +52,135 @@ body {
   font-size: 72px;
   color: #00ff00;
   text-shadow: 0 0 6px #00ff00, 0 0 12px #9900ff;
+  text-align: center;
+}
+
+/* Music button */
+.music-button button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #00ff00;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-family: 'UnifrakturCook', cursive;
+}
+
+/* Moving text */
+.moving-text {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive;
+  color: #00ff00;
+  font-size: 22px;
+  pointer-events: none;
+}
+
+.moving-text.top {
+  top: 0;
+  animation: moveLeftRightTop 6s linear infinite alternate;
+}
+
+.moving-text.bottom {
+  bottom: 0;
+  animation: moveLeftRightBottom 8s linear infinite alternate;
+}
+
+@keyframes moveLeftRightTop {
+  0% {transform: translateX(-50%);}
+  100% {transform: translateX(50%);}
+}
+
+@keyframes moveLeftRightBottom {
+  0% {transform: translateX(50%);}
+  100% {transform: translateX(-50%);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Glitter Canvas -->
+<canvas id="glitterCanvas"></canvas>
+
+<!-- Header: Profile Pic, Name, Button -->
+<div class="header-container">
+  <img src="https://i.imgur.com/bVe9Sl2.jpeg" alt="Prince Ari" class="profile-pic">
+  <div class="name">Prince Ari</div>
+  <div class="music-button">
+    <button id="playMusic">Play MCR – Demolition Lovers</button>
+    <audio id="music" src="ytmp3free.cc_demolition-lovers-youtubemp3free.org.mp3" preload="auto"></audio>
+  </div>
+</div>
+
+<!-- Moving Top Text -->
+<div class="moving-text top">
+  <span>✨Prince Ari Lives!✨</span>
+</div>
+
+<!-- Moving Bottom Text -->
+<div class="moving-text bottom">
+  <span>🎸 Listening to Demolition Lovers 🎸</span>
+</div>
+
+<!-- Cursor Sparkles -->
+<script src="https://cdn.jsdelivr.net/gh/epistemex/cursor-effects@latest/dist/sparkle.js"></script>
+<script>
+  new SparkleCursor({
+    color: "#00ff00",
+    shape: "★",
+    sparkle: true
+  });
+</script>
+
+<!-- Glitter Canvas Script -->
+<script>
+window.onload = function() {
+  const canvas = document.getElementById('glitterCanvas');
+  const ctx = canvas.getContext('2d');
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  const glitter = [];
+  for(let i=0;i<100;i++){
+    glitter.push({
+      x: Math.random()*canvas.width,
+      y: Math.random()*canvas.height,
+      size: Math.random()*4+1,
+      speed: Math.random()*2+1,
+      color: Math.random()>0.5 ? "#00ff00" : "#ff00ff"
+    });
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    glitter.forEach(g=>{
+      ctx.fillStyle = g.color;
+      ctx.fillRect(g.x,g.y,g.size,g.size);
+      g.y += g.speed;
+      if(g.y > canvas.height){ g.y = 0; g.x = Math.random()*canvas.width; }
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+}
+</script>
+
+<!-- MCR Play Button Script -->
+<script>
+const music = document.getElementById('music');
+document.getElementById('playMusic').onclick = () => {
+  if(music.paused){ music.play(); } 
+  else { music.pause(); }
+};
+</script>
+
+</body>
+</html>
+
