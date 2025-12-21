@@ -19,4 +19,37 @@ body {
 /* Glitter canvas */
 #glitterCanvas {
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+}
 
+/* HEADER CONTAINER: everything stacked + centered */
+.header-container {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
+  justify-content: center;
+  margin-top: 50px;
+  gap: 15px;              /* space between items */
+}
+
+/* Profile picture */
+.profile-pic {
+  width: 150px;
+  height: auto;
+  max-height: 150px;
+  border: 3px solid #00ff00;
+  /* border-radius: 50%; */ /* uncomment for circle */
+  display: block;
+}
+
+/* Name styling */
+.name {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 72px;
+  color: #00ff00;
+  text-shadow: 0 0 6px #00ff00, 0 0 12px #9900ff;
