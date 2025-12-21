@@ -25,7 +25,56 @@ header {
   text-align: center;
   padding: 20px;
 }
+<!-- Flickering Quotes -->
+<div class="quotes">
+  <p>"I got so emo I fell apart." – Gerard Way</p>
+  <p>"One day your life will flash before your eyes. Make sure it's worth watching."</p>
+</div>
 
+<!-- AIM-style scrolling away messages -->
+<div class="scrolling-away">
+  <marquee behavior="scroll" direction="left">
+    Away: be right back. | Away: writing bitter poetry. | Away: listening to Demolition Lovers. |
+  </marquee>
+</div>
+
+<!-- Cursor Sparkles -->
+<script src="https://cdn.jsdelivr.net/gh/epistemex/cursor-effects@latest/dist/sparkle.js"></script>
+<script>
+  new SparkleCursor({
+    color: "#00ff00",
+    shape: "★",
+    sparkle: true
+  });
+</script>
+
+<!-- Required CSS for quotes and scrolling messages -->
+<style>
+  .quotes {
+    text-align: center;
+    animation: flicker 2s infinite;
+    margin: 20px 0;
+    color: #ff00ff; /* neon purple */
+    font-family: 'Comic Sans MS', cursive;
+  }
+
+  @keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {opacity:1;}
+    20%,22%,24%,55% {opacity:0.1;}
+  }
+
+  .scrolling-away {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #000;
+    color: #ff00ff;
+    font-family: 'Comic Sans MS', cursive;
+    padding: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+</style>
 header h1 {
   font-size: 48px;
   color: #39ff14;
