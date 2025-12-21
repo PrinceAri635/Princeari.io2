@@ -56,7 +56,29 @@ body {
   font-size: 32px;
   margin-bottom: 15px;
 }
-
+  <!-- Likes & Dislikes Section --> 
+<div class="likes-dislikes"> 
+  <div class="likes"> 
+    <h3>⋆ Likes</h3> 
+    <ul> 
+      <li>Music</li> 
+      <li>Glitter</li> 
+      <li>Ferrets</li> 
+      <li>Art of any form</li>  
+      <li>Gaming</li> 
+    </ul> 
+  </div> 
+  <div class="dislikes"> 
+    <h3>⋆ Dislikes</h3> 
+    <ul> 
+      <li>Boring soullessness</li> 
+      <li>Negativity</li> 
+      <li>People who hate animals</li> 
+      <li>Live action remakes</li> 
+      <li>Society</li> 
+    </ul> 
+  </div> 
+</div> 
 /* HEADER CONTAINER: profile pic, name, button */
 .header-container {
   display: flex;
@@ -128,6 +150,39 @@ body {
   0% {transform: translateX(50%);}
   100% {transform: translateX(-50%);}
 }
+  .likes-dislikes {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+.likes-dislikes h3 {
+  color: #00ff00; /* neon green for headings */
+  font-family: 'UnifrakturCook', cursive;
+  text-shadow: 0 0 6px #00ff00, 0 0 12px #9900ff;
+  margin-bottom: 10px;
+}
+
+.likes-dislikes ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #ff00ff;
+  -webkit-text-stroke: 1px black; /* outline for contrast */
+  text-shadow:
+    1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0 0 6px #ff00ff;
+}
+
+.likes-dislikes li {
+  margin: 4px 0;
+}
+
 </style>
 </head>
 
