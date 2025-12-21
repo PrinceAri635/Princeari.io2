@@ -136,5 +136,157 @@ body {
 /* Moving text */
 .moving-text {
   position: fixed;
-  width: 1
+  width: 100%;
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive;
+  color: #00ff00;
+  font-size: 22px;
+  pointer-events: none;
+}
+
+.moving-text.top {
+  top: 0;
+  animation: moveLeftRightTop 6s linear infinite alternate;
+}
+
+.moving-text.bottom {
+  bottom: 0;
+  animation: moveLeftRightBottom 8s linear infinite alternate;
+}
+
+@keyframes moveLeftRightTop {
+  0% {transform: translateX(-50%);}
+  100% {transform: translateX(50%);}
+}
+
+@keyframes moveLeftRightBottom {
+  0% {transform: translateX(50%);}
+  100% {transform: translateX(-50%);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Glitter Canvas -->
+<canvas id="glitterCanvas"></canvas>
+
+<!-- Header: Profile Pic, Name, Button -->
+<div class="header-container">
+  <img src="https://i.imgur.com/bVe9Sl2.jpeg" alt="Prince Ari" class="profile-pic">
+  <div class="name">Prince Ari</div>
+  <div class="music-button">
+    <button id="playMusic">Play MCR – Demolition Lovers</button>
+    <audio id="music" src="ytmp3free.cc_demolition-lovers-youtubemp3free.org.mp3" preload="auto"></audio>
+  </div>
+</div>
+
+<!-- About Me Section -->
+<div class="about-me">
+  <h2>About Me</h2>
+  <p>⋆ℕ𝕒𝕞𝕖: Prince Ari</p>
+  <p>⋆ℙ𝕣𝕠𝕟𝕠𝕦𝕟𝕤: He/They</p>
+  <p>⋆𝕊𝕖𝕩𝕦𝕒𝕝𝕚𝕥𝕪: Pansexual</p>
+  <p>⋆𝕄𝕒𝕛𝕠𝕣 𝕫𝕠𝕕𝕚𝕒𝕔: Taurus Sun / Cancer Moon / Sagittarius Rising</p>
+  <p>⋆𝔸𝕘𝕖: 20</p>
+  <p>⋆𝔾𝕖𝕟𝕕𝕖𝕣: Trans masc</p>
+  <p>⋆𝔹𝕚𝕣𝕥𝕙𝕕𝕒𝕪: April 27th</p>
+  <p>⋆𝕃𝕚𝕜𝕖𝕤: Music, glitter, ferrets</p>
+  <p>⋆ℍ𝕠𝕓𝕓𝕚𝕖𝕤: Crocheting, gaming, drawing</p>
+</div>
+
+<!-- Likes & Dislikes Section -->
+<div class="likes-dislikes">
+  <div class="likes">
+    <h3>⋆ Likes</h3>
+    <ul>
+      <li>Music</li>
+      <li>Glitter</li>
+      <li>Ferrets</li>
+      <li>Art of any form</li>
+      <li>Gaming</li>
+    </ul>
+  </div>
+  <div class="dislikes">
+    <h3>⋆ Dislikes</h3>
+    <ul>
+      <li>Boring soullessness</li>
+      <li>Negativity</li>
+      <li>People who hate animals</li>
+      <li>Live action remakes</li>
+      <li>Society</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Moving Top Text -->
+<div class="moving-text top">
+  <span>✨Prince Ari Lives!✨</span>
+</div>
+
+<!-- Moving Bottom Text -->
+<div class="moving-text bottom">
+  <span>🎸 Listening to Demolition Lovers 🎸</span>
+</div>
+
+<!-- Cursor Sparkles -->
+<script src="https://cdn.jsdelivr.net/gh/epistemex/cursor-effects@latest/dist/sparkle.js"></script>
+<script>
+  new SparkleCursor({
+    color: "#00ff00",
+    shape: "★",
+    sparkle: true
+  });
+</script>
+
+<!-- Glitter Canvas Script -->
+<script>
+window.onload = function() {
+  const canvas = document.getElementById('glitterCanvas');
+  const ctx = canvas.getContext('2d');
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  const glitter = [];
+  for(let i=0;i<100;i++){
+    glitter.push({
+      x: Math.random()*canvas.width,
+      y: Math.random()*canvas.height,
+      size: Math.random()*4+1,
+      speed: Math.random()*2+1,
+      color: Math.random()>0.5 ? "#00ff00" : "#ff00ff"
+    });
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    glitter.forEach(g=>{
+      ctx.fillStyle = g.color;
+      ctx.fillRect(g.x,g.y,g.size,g.size);
+      g.y += g.speed;
+      if(g.y > canvas.height){ g.y = 0; g.x = Math.random()*canvas.width; }
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+}
+</script>
+
+<!-- MCR Play Button Script -->
+<script>
+const music = document.getElementById('music');
+document.getElementById('playMusic').onclick = () => {
+  if(music.paused){ music.play(); } 
+  else { music.pause(); }
+};
+</script>
+
+</body>
+</html>
+
 
