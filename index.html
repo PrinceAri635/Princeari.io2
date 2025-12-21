@@ -12,7 +12,46 @@ body {
   font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
   margin: 0;
 }
+<!-- Glitter Rain -->
+<canvas id="glitterCanvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;"></canvas>
+<script>
+const canvas = document.getElementById('glitterCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
+const glitterCount = 100;
+const glitters = [];
+
+for(let i=0;i<glitterCount;i++){
+  glitters.push({
+    x: Math.random()*canvas.width,
+    y: Math.random()*canvas.height,
+    size: Math.random()*4+1,
+    speed: Math.random()*2+1,
+    color: Math.random()>0.5 ? '#00ff00' : '#ff00ff'
+  });
+}
+
+function animate(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  for(let g of glitters){
+    ctx.fillStyle = g.color;
+    ctx.fillRect(g.x,g.y,g.size,g.size);
+    g.y += g.speed;
+    if(g.y>canvas.height){
+      g.y = 0;
+      g.x = Math.random()*canvas.width;
+    }
+  }
+  requestAnimationFrame(animate);
+}
+animate();
+window.addEventListener('resize',()=>{
+  canvas.width=window.innerWidth;
+  canvas.height=window.innerHeight;
+});
+</script>
 .container {
   width: 900px;
   margin: auto;
@@ -25,7 +64,24 @@ header {
   text-align: center;
   padding: 20px;
 }
+<!-- Music Button -->
+<div style="text-align:center; margin:20px;">
+  <button id="playMusic" style="padding:10px 20px; font-size:16px; background:#00ff00; color:#000; border:none; cursor:pointer;">
+    Play MCR – Demolition Lovers
+  </button>
+  <audio id="music" src="YOUR_MCR_MP3_URL_HERE" preload="auto"></audio>
+</div>
 
+<script>
+const music = document.getElementById('music');
+document.getElementById('playMusic').onclick = () => {
+  if(music.paused){
+    music.play();
+  } else {
+    music.pause();
+  }
+};
+</script>
 header h1 {
   font-size: 48px;
   color: #39ff14;
