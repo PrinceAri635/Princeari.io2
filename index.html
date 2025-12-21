@@ -209,7 +209,7 @@ body {
   0% {transform: translateX(50%);}
   100% {transform: translateX(-50%);}
 }
-  /* Pets Section */
+/* Pets Section */
 .pets {
   margin-top: 40px;
   position: relative;
@@ -236,11 +236,13 @@ body {
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 
 .pet-card {
   width: 180px;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
   border: 2px solid #00ff00;
   padding: 10px;
 }
@@ -274,7 +276,6 @@ body {
     1px -1px 0 #000,
     -1px -1px 0 #000;
 }
-
 </style>
 </head>
 <body>
@@ -315,13 +316,13 @@ body {
   <div class="pet-grid">
 
     <div class="pet-card">
-      <img src="PASTE_PET_IMAGE_URL_HERE" alt="Pet name">
+      <img src="IMG_6679.jpg" alt="Pet name">
       <div class="Koda">Pet Name</div>
       <div class="pet-desc">Tiny menace. Professional chaos goblin.</div>
     </div>
 
     <div class="pet-card">
-      <img src="PASTE_PET_IMAGE_URL_HERE" alt="Pet name">
+      <img src="IMG_1803.jpg" alt="Pet name">
       <div class="Starbie">Pet Name</div>
       <div class="pet-desc">Sleeps like royalty. Judges silently.</div>
     </div>
@@ -330,7 +331,7 @@ body {
 </div>
 
     <div class="pet-card">
-      <img src="PASTE_PET_IMAGE_URL_HERE" alt="Pet name">
+      <img src="IMG_2758.jpg" alt="Pet name">
       <div class="Kaneki">Pet Name</div>
       <div class="pet-desc">Sleeps like royalty. Judges silently.</div>
     </div>
