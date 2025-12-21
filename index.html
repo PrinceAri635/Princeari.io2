@@ -5,61 +5,109 @@
 <title>✖ Prince Ari ✖</title>
 
 <style>
-body {
-  background: url("https://i.imgur.com/8kZQZgK.gif");
-  background-color: black;
-  color: #39ff14;
-  font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
-  margin: 0;
-}
+<body>
+  <!-- Profile Picture -->
+  <div style="text-align:center; margin-top:20px;">
+    <img src="YOUR_PROFILE_PIC_URL" alt="Prince Ari" 
+         style="width:150px;height:150px;border-radius:50%;border:3px solid #00ff00;">
+  </div>
+
+  <!-- Header -->
+  <h1 style="text-align:center; color:#00ff00; font-family:'Comic Sans MS', cursive, sans-serif; text-shadow: 2px 2px #ff00ff;">
+    Prince Ari's Chaos Page
+  </h1>
+
+  <!-- Edgy Quotes -->
+  <div style="text-align:center; font-family:'Arial', sans-serif; color:#ff00ff; animation: flicker 2s infinite;">
+    <p>"I got so emo I fell apart." – Gerard Way</p>
+    <p>"Bitter text is mandatory."</p>
+  </div>
+
+  <!-- MCR Music Button -->
+  <div style="text-align:center; margin:20px;">
+    <button id="playMusic" 
+            style="padding:10px 20px; font-size:16px; background:#00ff00; color:#000; border:none; cursor:pointer; font-family:'Comic Sans MS', cursive;">
+      Play MCR – Demolition Lovers
+    </button>
+    <audio id="music" src="YOUR_MCR_MP3_URL_HERE" preload="auto"></audio>
+  </div>
+
+  <!-- AIM-style scrolling away messages -->
+  <div style="position:fixed; bottom:0; width:100%; background:#000; color:#ff00ff; font-family:'Comic Sans MS', cursive; padding:5px; overflow:hidden; white-space:nowrap;">
+    <marquee behavior="scroll" direction="left">
+      Away: be right back. | Away: writing bitter poetry. | Away: listening to Demolition Lovers. |
+    </marquee>
+  </div>
+
+  <!-- Glitter Rain Canvas -->
+  <canvas id="glitterCanvas"></canvas>
+
+  <!-- Cursor Sparkles -->
+  <script src="https://cdn.jsdelivr.net/gh/epistemex/cursor-effects@latest/dist/sparkle.js"></script>
+  <script>
+    new SparkleCursor({
+      color: "#00ff00",
+      shape: "★",
+      sparkle: true
+    });
+  </script>
+
+  <!-- Flicker Animation -->
   <style>
-<!-- Glitter Rain -->
-<canvas id="glitterCanvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;"></canvas>
-<script>
-const canvas = document.getElementById('glitterCanvas');
-const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-const glitterCount = 100;
-const glitters = [];
-
-for(let i=0;i<glitterCount;i++){
-  glitters.push({
-    x: Math.random()*canvas.width,
-    y: Math.random()*canvas.height,
-    size: Math.random()*4+1,
-    speed: Math.random()*2+1,
-    color: Math.random()>0.5 ? '#00ff00' : '#ff00ff'
-  });
-}
-
-function animate(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  for(let g of glitters){
-    ctx.fillStyle = g.color;
-    ctx.fillRect(g.x,g.y,g.size,g.size);
-    g.y += g.speed;
-    if(g.y>canvas.height){
-      g.y = 0;
-      g.x = Math.random()*canvas.width;
+    #glitterCanvas { position:fixed; top:0; left:0; width:100vw; height:100vh; pointer-events:none; z-index:9999; }
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {opacity:1;}
+      20%,22%,24%,55% {opacity:0.1;}
     }
-  }
-  requestAnimationFrame(animate);
-}
-animate();
-window.addEventListener('resize',()=>{
-  canvas.width=window.innerWidth;
-  canvas.height=window.innerHeight;
-});
-</script>
-.container {
-  width: 900px;
-  margin: auto;
-  background: rgba(20,0,30,0.9);
-  border: 5px dashed #39ff14;
-}
-<style>
+  </style>
+
+  <!-- Glitter Rain Script -->
+  <script>
+    window.onload = function() {
+      const canvas = document.getElementById('glitterCanvas');
+      const ctx = canvas.getContext('2d');
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+
+      const glitter = [];
+      for(let i=0;i<100;i++){
+        glitter.push({
+          x: Math.random()*canvas.width,
+          y: Math.random()*canvas.height,
+          size: Math.random()*4+1,
+          speed: Math.random()*2+1,
+          color: Math.random()>0.5 ? "#00ff00" : "#ff00ff"
+        });
+      }
+
+      function draw(){
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        glitter.forEach(g=>{
+          ctx.fillStyle = g.color;
+          ctx.fillRect(g.x,g.y,g.size,g.size);
+          g.y += g.speed;
+          if(g.y > canvas.height){ g.y = 0; g.x = Math.random()*canvas.width; }
+        });
+        requestAnimationFrame(draw);
+      }
+      draw();
+    }
+  </script>
+
+  <!-- Music Button Script -->
+  <script>
+    const music = document.getElementById('music');
+    document.getElementById('playMusic').onclick = () => {
+      if(music.paused){ music.play(); } 
+      else { music.pause(); }
+    };
+  </script>
+</body>
 header {
   background: linear-gradient(90deg, black, #6a0dad, black);
   text-align: center;
