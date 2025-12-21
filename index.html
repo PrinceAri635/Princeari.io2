@@ -194,6 +194,48 @@ body {
   from { transform: translateX(50%); }
   to { transform: translateX(-50%); }
 }
+  /* Favorite Movies */
+.movies {
+  margin-top: 40px;
+  font-family: 'UnifrakturCook', cursive;
+  position: relative;
+  z-index: 1;
+}
+
+.movies h2 {
+  font-size: 32px;
+  color: #00ff00;
+  text-shadow:
+    1px 1px 0 #000,
+    -1px 1px 0 #000,
+    0 0 8px #00ff00;
+  margin-bottom: 20px;
+}
+
+.movie-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.movie-card {
+  width: 180px;
+  background: rgba(0,0,0,0.6);
+  border: 2px solid #00ff00;
+  padding: 10px;
+}
+
+.movie-card img {
+  width: 100%;
+  border: 2px solid #ff00ff;
+}
+
+.movie-title {
+  margin-top: 8px;
+  font-size: 18px;
+}
+
 </style>
 </head>
 
@@ -256,6 +298,42 @@ body {
   <p>"Life gives you many reasons to smile. Your rebellion is one of them." – Andy Biersack</p>
   <p>"The past isn’t a ghost — it’s the soil I grew from." – Dorian Bridges</p>
   <p>"Hope isn’t soft. It insists."</p>
+</div>
+<!-- Favorite Movies -->
+<div class="movies glow">
+  <h2>🎬 Favorite Movies 🎬</h2>
+
+  <div class="movie-grid">
+    <div class="movie-card">
+      <img src="only-lovers-left-alive.jpg" alt="Only Lovers Left Alive">
+      <div class="movie-title">Only Lovers Left Alive</div>
+    </div>
+
+    <div class="movie-card">
+      <img src="perks-of-being-a-wallflower.jpg" alt="Perks of Being a Wallflower">
+      <div class="movie-title">Perks of Being a Wallflower</div>
+    </div>
+
+    <div class="movie-card">
+      <img src="the-crow.jpg" alt="The Crow">
+      <div class="movie-title">The Crow</div>
+    </div>
+
+    <div class="movie-card">
+      <img src="dark-crystal.jpg" alt="The Dark Crystal">
+      <div class="movie-title">The Dark Crystal</div>
+    </div>
+
+    <div class="movie-card">
+      <img src="willow.jpg" alt="Willow">
+      <div class="movie-title">Willow</div>
+    </div>
+
+    <div class="movie-card">
+      <img src="interview-with-the-vampire.jpg" alt="Interview with the Vampire">
+      <div class="movie-title">Interview with the Vampire</div>
+    </div>
+  </div>
 </div>
 
 <!-- Socials -->
