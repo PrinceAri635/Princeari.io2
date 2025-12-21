@@ -41,7 +41,7 @@
   /* Name under profile pic */
   .name {
     color: #00ff00;
-    font-size: 40px;
+    font-size:60px;
     margin-top: 10px;
   }
 
@@ -72,8 +72,47 @@
     <button id="playMusic">Play MCR – Demolition Lovers</button>
     <audio id="music" src="YOUR_MCR_MP3_URL_HERE" preload="auto"></audio>
   </div>
+</<!-- Moving Top Text -->
+<div class="moving-text top">
+  <span>✨Prince Ari Lives!✨</span>
 </div>
 
+<!-- Moving Bottom Text -->
+<div class="moving-text bottom">
+  <span>🎸 Listening to Demolition Lovers 🎸</span>
+</div>
+
+<style>
+.moving-text {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive;
+  color: #00ff00;
+  font-size: 22px;
+  pointer-events: none; /* doesn’t block clicks */
+}
+
+.moving-text.top {
+  top: 0;
+  animation: moveLeftRightTop 6s linear infinite alternate;
+}
+
+.moving-text.bottom {
+  bottom: 0;
+  animation: moveLeftRightBottom 8s linear infinite alternate;
+}
+
+@keyframes moveLeftRightTop {
+  0% {transform: translateX(-50%);}
+  100% {transform: translateX(50%);}
+}
+
+@keyframes moveLeftRightBottom {
+  0% {transform: translateX(50%);}
+  100% {transform: translateX(-50%);}
+}
+</style>
 <!-- Glitter Canvas -->
 <canvas id="glitterCanvas"></canvas>
 
