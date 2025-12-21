@@ -29,25 +29,16 @@ body {
   background: transparent;
 }
 
-/* Main container to hold header + about me */
-.main-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* header on top, about me below */
-  gap: 40px; /* spacing between header and about me */
-  margin-top: 50px;
-  position: relative;
-  z-index: 1; /* sit above glitter */
-}
-
 /* HEADER CONTAINER: profile pic, name, button */
 .header-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
   gap: 15px;
+  position: relative;  
+  z-index: 1;
 }
 
 /* Profile picture */
@@ -81,10 +72,17 @@ body {
 
 /* About Me Section */
 .about-me {
-  color: #ff00ff;
+  margin: 50px auto 50px;
+  padding: 20px;
+  color: #ff00ff; 
   text-align: center;
   font-family: 'UnifrakturCook', cursive;
   font-size: 20px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 10px;
+  max-width: 600px;
+  z-index: 1;
+  position: relative;
 }
 
 .about-me h2 {
@@ -136,36 +134,30 @@ body {
 <!-- Glitter Canvas -->
 <canvas id="glitterCanvas"></canvas>
 
-<!-- Main container for everything -->
-<div class="main-container">
-
-  <!-- Header: Profile Pic, Name, Button -->
-  <div class="header-container">
-    <img src="https://i.imgur.com/bVe9Sl2.jpeg" alt="Prince Ari" class="profile-pic">
-    <div class="name">Prince Ari</div>
-    <div class="music-button">
-      <button id="playMusic">Play MCR – Demolition Lovers</button>
-      <audio id="music" src="ytmp3free.cc_demolition-lovers-youtubemp3free.org.mp3" preload="auto"></audio>
-    </div>
+<!-- Header: Profile Pic, Name, Button -->
+<div class="header-container">
+  <img src="https://i.imgur.com/bVe9Sl2.jpeg" alt="Prince Ari" class="profile-pic">
+  <div class="name">Prince Ari</div>
+  <div class="music-button">
+    <button id="playMusic">Play MCR – Demolition Lovers</button>
+    <audio id="music" src="ytmp3free.cc_demolition-lovers-youtubemp3free.org.mp3" preload="auto"></audio>
   </div>
+</div>
 
-  <!-- About Me Section -->
-  <div class="about-me">
-    <h2>About Me</h2>
-    <p>⋆ℕ𝕒𝕞𝕖: Prince Ari</p>
-    <p>⋆ℙ𝕣𝕠𝕟𝕠𝕦𝕟𝕤: He/they</p>
-    <p>⋆𝕊𝕖𝕩𝕦𝕒𝕝𝕚𝕥𝕪: Pansexual</p>
-    <p>⋆𝕄𝕒𝕛𝕠𝕣 𝕫𝕠𝕕𝕚𝕒𝕔: Taurus Sun / Cancer Moon / Sagittarius Rising</p>
-    <p>⋆𝔸𝕘𝕖: 20</p>
-    <p>⋆𝔾𝕖𝕟𝕕𝕖𝕣: Trans masc</p>
-    <p>⋆𝔹𝕚𝕣𝕥𝕙𝕕𝕒𝕪: April 27th</p>
-    <p>⋆𝕃𝕚𝕜𝕖𝕤: Music, glitter, ferrets</p>
-    <p>⋆ℍ𝕠𝕓𝕓𝕚𝕖𝕤: Crocheting, gaming, drawing</p>
-
-    <h2>Summary</h2>
-    <p>“I live for neon midnights, tangled songs, and sparkles in the dark — your glitter-soaked prince of the night.”</p>
-  </div>
-
+<!-- About Me Section -->
+<div class="about-me">
+  <h2>About Me</h2>
+  <p>⋆ℕ𝕒𝕞𝕖: Prince Ari</p>
+  <p>⋆ℙ𝕣𝕠𝕟𝕠𝕦𝕟𝕤: He/They</p>
+  <p>⋆𝕊𝕖𝕩𝕦𝕒𝕝𝕚𝕥𝕪: Pansexual</p>
+  <p>⋆𝕄𝕒𝕛𝕠𝕣 𝕫𝕠𝕕𝕚𝕒𝕔: Taurus Sun / Cancer Moon / Sagittarius Rising</p>
+  <p>⋆𝔸𝕘𝕖: 20</p>
+  <p>⋆𝔾𝕖𝕟𝕕𝕖𝕣: Trans masc</p>
+  <p>⋆𝔹𝕚𝕣𝕥𝕙𝕕𝕒𝕪: April 27th</p>
+  <p>⋆𝕃𝕚𝕜𝕖𝕤: Music, glitter, ferrets</p>
+  <p>⋆ℍ𝕠𝕓𝕓𝕚𝕖𝕤: Crocheting, gaming, drawing</p>
+  <h2>Summary</h2>
+  <p>“I live for neon midnights, tangled songs, and sparkles in the dark — your glitter-soaked prince of the night.”</p>
 </div>
 
 <!-- Moving Top Text -->
@@ -181,11 +173,11 @@ body {
 <!-- Cursor Sparkles -->
 <script src="https://cdn.jsdelivr.net/gh/epistemex/cursor-effects@latest/dist/sparkle.js"></script>
 <script>
-new SparkleCursor({
-  color: "#00ff00",
-  shape: "★",
-  sparkle: true
-});
+  new SparkleCursor({
+    color: "#00ff00",
+    shape: "★",
+    sparkle: true
+  });
 </script>
 
 <!-- Glitter Canvas Script -->
@@ -237,3 +229,4 @@ document.getElementById('playMusic').onclick = () => {
 
 </body>
 </html>
+
