@@ -79,22 +79,33 @@ body {
   font-size: 32px;
   margin-bottom: 15px;
 }
-.likes-dislikes {
+  .likes-dislikes {
   display: flex;
-  justify-content: center;
-  gap: 50px;
+  justify-content: center; /* centers them horizontally */
+  gap: 50px; /* space between Likes and Dislikes */
   margin-top: 30px;
+  font-family: 'UnifrakturCook', cursive;
+}
+
+.likes-dislikes .likes,
+.likes-dislikes .dislikes {
+  width: 200px; /* adjust width as needed */
+  background: rgba(0,0,0,0.6);
+  border: 2px solid #00ff00;
+  padding: 10px;
 }
 
 .likes-dislikes h3 {
   color: #00ff00;
-  font-family: 'UnifrakturCook', cursive;
+  -webkit-text-stroke: 1px black;
   text-shadow: 0 0 6px #00ff00, 0 0 12px #9900ff;
+  margin-bottom: 10px;
 }
 
 .likes-dislikes ul {
   list-style: disc;
   padding-left: 20px;
+  color: #ff00ff;
 }
 
 /* Pets */
@@ -279,7 +290,7 @@ body {
   <p>"I live for neon midnights, tangled songs, and sparkles in the dark. – your glitter-soaked prince of the night"</p>
 </div>
 
-  <!-- Likes & Dislikes -->
+<!-- Likes & Dislikes -->
 <div class="likes-dislikes glow">
   <div class="likes">
     <h3>⋆ Likes</h3>
