@@ -159,7 +159,52 @@ body {
   font-size: 20px;
 }
 
-/* Movies */
+
+/* Socials */
+.socials {
+  margin: 40px auto 120px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 32px;
+  z-index: 2;
+}
+
+.socials a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Moving text */
+.moving-text {
+  position: fixed;
+  width: 100%;
+  font-family: 'Comic Sans MS', cursive;
+  color: #00ff00;
+  font-size: 22px;
+  pointer-events: none;
+}
+
+.moving-text.top {
+  top: 0;
+  animation: moveTop 6s linear infinite alternate;
+}
+
+.moving-text.bottom {
+  bottom: 0;
+  animation: moveBottom 8s linear infinite alternate;
+}
+
+@keyframes moveTop {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(50%); }
+}
+
+@keyframes moveBottom {
+  from { transform: translateX(50%); }
+  to { transform: translateX(-50%); }
+}
+  /* Movies */
 .movies {
   margin-top: 50px;
   font-family: 'UnifrakturCook', cursive;
@@ -211,50 +256,6 @@ body {
     0 0 6px #ff00ff;
 }
 
-/* Socials */
-.socials {
-  margin: 40px auto 120px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  font-size: 32px;
-  z-index: 2;
-}
-
-.socials a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Moving text */
-.moving-text {
-  position: fixed;
-  width: 100%;
-  font-family: 'Comic Sans MS', cursive;
-  color: #00ff00;
-  font-size: 22px;
-  pointer-events: none;
-}
-
-.moving-text.top {
-  top: 0;
-  animation: moveTop 6s linear infinite alternate;
-}
-
-.moving-text.bottom {
-  bottom: 0;
-  animation: moveBottom 8s linear infinite alternate;
-}
-
-@keyframes moveTop {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(50%); }
-}
-
-@keyframes moveBottom {
-  from { transform: translateX(50%); }
-  to { transform: translateX(-50%); }
-}
 </style>
 </head>
 
@@ -398,6 +399,36 @@ body {
     <div class="movie-card">
       <img src="stardust.jpg" alt="Stardust">
       <div class="movie-title">Stardust</div>
+    </div>
+  </div>
+</div>
+<!-- Favorite Games -->
+<div class="movies glow">
+  <h2>🎮 Favorite Games 🎮</h2>
+  <div class="movie-grid">
+    <div class="movie-card">
+      <img src="darksouls2.jpg" alt="Dark Souls 2">
+      <div class="movie-title">Dark Souls 2</div>
+    </div>
+
+    <div class="movie-card">
+      <img src="deadspace3.jpg" alt="Dead Space 3">
+      <div class="movie-title">Dead Space 3</div>
+    </div>
+
+    <div class="movie-card">
+      <img src="thewitcher3.jpg" alt="The Witcher 3">
+      <div class="movie-title">The Witcher 3</div>
+    </div>
+
+    <div class="movie-card">
+      <img src="alicemadnessreturns.jpg" alt="Alice: Madness Returns">
+      <div class="movie-title">Alice: Madness Returns</div>
+    </div>
+
+    <div class="movie-card">
+      <img src="plantsvzombies.jpg" alt="Plants vs. Zombies">
+      <div class="movie-title">Plants vs. Zombies</div>
     </div>
   </div>
 </div>
