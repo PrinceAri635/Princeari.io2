@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <title>Prince Ari</title>
 
@@ -404,6 +405,38 @@ body {
 .friend-desc {
   font-size: 14px;
 }
+  @media (max-width: 768px) {
+
+  .name {
+    font-size: 48px;
+  }
+
+  .profile-pic {
+    width: 120px;
+  }
+
+  .about-me {
+    font-size: 18px;
+    padding: 0 15px;
+  }
+
+  .likes-dislikes {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .likes-dislikes .likes,
+  .likes-dislikes .dislikes {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .moving-text {
+    font-size: 16px;
+  }
+}
+
 
 </style>
 </head>
