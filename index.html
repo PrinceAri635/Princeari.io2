@@ -383,7 +383,7 @@ body {
   gap: 25px;
 }
 
-/* FIXED FRIEND CARD ANIMATION */
+/* Fixed friend hover info */
 .friend-card-anim { 
   position: relative;
   width: 180px;
@@ -413,11 +413,14 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: rgba(0,0,0,0.7);
+  max-height: 100%;
+  background: rgba(0,0,0,0.75);
   color: #ff00ff;
   text-align: center;
-  padding: 6px;
+  padding: 10px;
   font-size: 14px;
+  line-height: 1.2em;
+  overflow-y: auto;
   opacity: 0;
   transition: opacity 0.5s ease;
   font-family: 'UnifrakturCook', cursive;
@@ -458,10 +461,139 @@ body {
     font-size: 16px;
   }
 }
+
 </style>
 </head>
 
 <body>
-<!-- The rest of your HTML remains the same -->
+
+<canvas id="glitterCanvas"></canvas>
+
+<!-- Header -->
+<div class="header-container">
+  <img src="https://i.imgur.com/bVe9Sl2.jpeg" class="profile-pic" alt="Prince Ari">
+  <div class="name">Prince Ari</div>
+
+  <div class="music-button">
+    <button id="playMusic">Play Music</button>
+    <audio id="music1" src="ytmp3free.cc_demolition-lovers-youtubemp3free.org.mp3"></audio>
+    <audio id="music2" src="ytmp3free.cc_sonne-youtubemp3free.org.mp3"></audio>
+  </div>
+</div>
+
+<!-- About Me -->
+<div class="about-me glow">
+  <h2>About Me</h2>
+  <p>⋆Name: Prince Ari</p>
+  <p>⋆Pronouns: He/They</p>
+  <p>⋆Sexuality: Pansexual</p>
+  <p>⋆Major Zodiac: Taurus Sun / Cancer Moon / Sagittarius Rising</p>
+  <p>⋆Age: 20</p>
+  <p>⋆Gender: Trans Masc</p>
+  <p>⋆Birthday: April 27th</p>
+  <p>⋆ℍHobbies: Crocheting, Gaming, Drawing</p>
+  <h2>Summary</h2>
+  <p>"I live for neon midnights, tangled songs, and sparkles in the dark. – your glitter-soaked prince of the night"</p>
+</div>
+
+<!-- Likes & Dislikes -->
+<div class="likes-dislikes glow">
+  <div class="likes">
+    <h3>⋆ Likes</h3>
+    <ul>
+      <li>Music</li>
+      <li>Glitter</li>
+      <li>Ferrets</li>
+      <li>Art of any form</li>
+      <li>Gaming</li>
+    </ul>
+  </div>
+  <div class="dislikes">
+    <h3>⋆ Dislikes</h3>
+    <ul>
+      <li>Boring soullessness</li>
+      <li>Negativity</li>
+      <li>People who hate animals</li>
+      <li>Live action remakes</li>
+      <li>Society</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Pets -->
+<div class="pets">
+  <h2>🐾 My Creatures 🐾</h2>
+  <div class="pet-grid glow">
+    <div class="pet-card">
+      <img src="IMG_6679.jpeg" alt="Koda">
+      <div class="pet-name">Koda</div>
+      <div class="pet-desc">Tiny menace. Chaos goblin.</div>
+    </div>
+
+    <div class="pet-card">
+      <img src="IMG_1803.jpeg" alt="Starbie">
+      <div class="pet-name">Starbie</div>
+      <div class="pet-desc">Royal sleeper. Silent judge.</div>
+    </div>
+
+    <div class="pet-card">
+      <img src="IMG_2758.jpeg" alt="Kaneki">
+      <div class="pet-name">Kaneki</div>
+      <div class="pet-desc">Soft criminal. Heart thief.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Quotes -->
+<div class="quotes glow">
+  <h2>✨ Favorite Quotes ✨</h2>
+  <p>"One day your life will flash before your eyes. Make sure it's worth watching." – Gerard Way</p>
+  <p>"Life gives you many reasons to smile. Your rebellion is one of them." – Andy Biersack</p>
+  <p>"The past isn’t a ghost — it’s the soil I grew from." – Dorian Bridges</p>
+  <p>"Hope isn’t soft. It insists."</p>
+</div>
+
+<!-- Favorite Movies -->
+<div class="movies glow">
+  <h2>🎬 Favorite Movies 🎬</h2>
+  <div class="movie-grid">
+    <div class="movie-card">
+      <img src="onlyloversleftalive.jpg" alt="Only Lovers Left Alive">
+      <div class="movie-title">Only Lovers Left Alive</div>
+    </div>
+
+    <div class="movie-card">
+      <img src="perksofbeingawallflower.jpg" alt="Perks of Being a Wallflower">
+      <div class="movie-title">Perks of Being a Wallflower</div>
+    </div>
+
+    <div class="movie-card">
+      <img src="thecrow.jpg" alt="The Crow">
+      <div class="movie-title">The Crow</div>
+    </div>
+
+    <div class="movie-card">
+      <img src="darkcrystal.jpg" alt="The Dark Crystal">
+      <div class="movie-title">The Dark Crystal</div>
+    </div>
+
+    <div class="movie-card">
+      <img src="willow.jpg" alt="Willow">
+      <div class="movie-title">Willow</div>
+    </div>
+
+    <div class="movie-card">
+      <img src="Interviewwithavampire.jpg" alt="Interview with the Vampire">
+      <div class="movie-title">Interview with the Vampire</div>
+    </div>
+
+    <div class="movie-card">
+      <img src="frankeinstein.jpg" alt="Frankenstein">
+      <div class="movie-title">Frankenstein</div>
+    </div>
+
+    <div class="movie-card">
+      <img src="edwardscissorhands.jpg" alt="Edward Scissorhands">
+      <div class="movie-title">Edward Scissorhands
 
 
