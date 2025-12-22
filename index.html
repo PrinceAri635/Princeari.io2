@@ -383,11 +383,10 @@ body {
   gap: 25px;
 }
 
-/* Fixed friend hover info */
+/* FIXED friend-card-anim */
 .friend-card-anim { 
   position: relative;
   width: 180px;
-  height: 180px;
   overflow: hidden;
   border-radius: 15px;
   border: 2px solid #00ff00;
@@ -413,7 +412,6 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  max-height: 100%;
   background: rgba(0,0,0,0.75);
   color: #ff00ff;
   text-align: center;
@@ -421,6 +419,7 @@ body {
   font-size: 14px;
   line-height: 1.2em;
   overflow-y: auto;
+  max-height: 100%;
   opacity: 0;
   transition: opacity 0.5s ease;
   font-family: 'UnifrakturCook', cursive;
@@ -461,7 +460,6 @@ body {
     font-size: 16px;
   }
 }
-
 </style>
 </head>
 
@@ -594,6 +592,55 @@ body {
 
     <div class="movie-card">
       <img src="edwardscissorhands.jpg" alt="Edward Scissorhands">
-      <div class="movie-title">Edward Scissorhands
+      <div class="movie-title">Edward Scissorhands</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Friends -->
+<div class="friends glow">
+  <h2>🌟 Friends 🌟</h2>
+  <div class="friend-grid">
+    <div class="friend-card-anim">
+      <img src="friend1.jpg" alt="Friend 1">
+      <div class="friend-info">
+        ⋆ Name: Starshine <br>
+        ⋆ Pronouns: They/Them <br>
+        ⋆ Favorite Band: Suicide Boys
+      </div>
+    </div>
+
+    <div class="friend-card-anim">
+      <img src="friend2.jpg" alt="Friend 2">
+      <div class="friend-info">
+        ⋆ Name: Moonbeam <br>
+        ⋆ Pronouns: She/Her <br>
+        ⋆ Favorite Band: Ghostemane
+      </div>
+    </div>
+
+    <div class="friend-card-anim">
+      <img src="friend3.jpg" alt="Friend 3">
+      <div class="friend-info">
+        ⋆ Name: Solaria <br>
+        ⋆ Pronouns: He/Him <br>
+        ⋆ Favorite Band: Motionless in White
+      </div>
+    </div>
+
+    <div class="friend-card-anim">
+      <img src="friend4.jpg" alt="Friend 4">
+      <div class="friend-info">
+        ⋆ Name: Eclipse <br>
+        ⋆ Pronouns: They/Them <br>
+        ⋆ Favorite Band: $uicideboy$
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
 
 
