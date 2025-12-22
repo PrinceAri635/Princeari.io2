@@ -255,6 +255,58 @@ body {
     -1px 1px 0 #000,
     0 0 6px #ff00ff;
 }
+  /* Books Section */
+.books {
+  margin-top: 50px;
+  font-family: 'UnifrakturCook', cursive;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.books h2 {
+  font-size: 32px;
+  color: #00ff00;
+  -webkit-text-stroke: 1px black;
+  text-shadow:
+    1px 1px 0 #000,
+    -1px 1px 0 #000,
+    0 0 8px #00ff00;
+  margin-bottom: 25px;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 25px;
+}
+
+.book-card {
+  background: rgba(0,0,0,0.6);
+  border: 2px solid #00ff00;
+  padding: 10px;
+}
+
+.book-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border: 2px solid #ff00ff;
+}
+
+.book-title {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #ff00ff;
+  -webkit-text-stroke: 1px black;
+  text-shadow:
+    1px 1px 0 #000,
+    -1px 1px 0 #000,
+    0 0 6px #ff00ff;
+}
+
 
 </style>
 </head>
@@ -429,6 +481,36 @@ body {
     <div class="movie-card">
       <img src="PVZ.jpg" alt="Plants vs. Zombies">
       <div class="movie-title">Plants vs. Zombies</div>
+    </div>
+  </div>
+</div>
+<!-- Favorite Books -->
+<div class="books glow">
+  <h2>📚 Favorite Books 📚</h2>
+  <div class="book-grid">
+    <div class="book-card">
+      <img src="frankenstein_book.jpg" alt="Frankenstein">
+      <div class="book-title">Frankenstein</div>
+    </div>
+
+    <div class="book-card">
+      <img src="exitnote_book.jpg" alt="Exit Note">
+      <div class="book-title">Exit Note</div>
+    </div>
+
+    <div class="book-card">
+      <img src="millenniumgothic_book.jpg" alt="Millennium Gothic">
+      <div class="book-title">Millennium Gothic</div>
+    </div>
+
+    <div class="book-card">
+      <img src="thefaultinourstars_book.jpg" alt="The Fault in Our Stars">
+      <div class="book-title">The Fault in Our Stars</div>
+    </div>
+
+    <div class="book-card">
+      <img src="interviewwithavampire_book.jpg" alt="Interview with the Vampire">
+      <div class="book-title">Interview with the Vampire</div>
     </div>
   </div>
 </div>
