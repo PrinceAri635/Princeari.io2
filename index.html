@@ -459,6 +459,32 @@ body {
   font-size: 60px; /* bigger on desktop */
   z-index: 2;
 }
+.socials-title {
+  text-align: center;
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 48px;
+  color: #00ff00;
+  margin: 40px 0 20px; /* space above and below */
+  text-shadow: 
+    1px 1px 0 #000,
+    -1px 1px 0 #000,
+    0 0 10px #00ff00,
+    0 0 20px #ff00ff; /* neon glow effect */
+}
+
+@media (max-width: 768px) {
+  .socials-title {
+    font-size: 36px;
+    margin: 30px 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .socials-title {
+    font-size: 28px;
+    margin: 20px 0 10px;
+  }
+}
 
 .socials a {
   text-decoration: none;
@@ -855,6 +881,9 @@ body {
 
 </div> <!-- END of friend-grid -->
 </div> <!-- END of friends section -->
+
+<!-- Separator / Socials Title -->
+<h2 class="socials-title glow">Connect with Me</h2>
 
 <!-- Socials -->
 <div class="socials glow">
