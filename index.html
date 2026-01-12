@@ -362,7 +362,7 @@ body {
 
 /* Friends */
 .friend-card-anim {
-  width: 250px;
+  width: 250px;       /* card width */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -370,10 +370,11 @@ body {
   cursor: pointer;
 }
 
-/* Image hover zoom */
+/* Image fits inside the card */
 .friend-card-anim img {
-  width: 100%;
-  height: 250px;
+  width: 100%;         /* full width of card */
+  height: auto;        /* adjust height automatically */
+  max-height: 200px;   /* limits how tall it can get */
   object-fit: cover;
   border-radius: 15px;
   border: 2px solid #00ff00;
@@ -382,11 +383,11 @@ body {
 }
 
 .friend-card-anim:hover img {
-  transform: scale(1.1);
+  transform: scale(1.05);   /* slight zoom */
   filter: drop-shadow(0 0 15px #ff00ff) drop-shadow(0 0 15px #00ff00);
 }
 
-/* Name always visible below image */
+/* Name always below image */
 .friend-name-static {
   margin-top: 10px;
   font-family: 'UnifrakturCook', cursive;
@@ -396,7 +397,7 @@ body {
   text-align: center;
 }
 
-/* About info hidden by default */
+/* Hidden info that drops down */
 .friend-info {
   max-height: 0;
   overflow: hidden;
@@ -411,9 +412,10 @@ body {
 
 /* Expand info on hover */
 .friend-card-anim:hover .friend-info {
-  max-height: 100px; /* adjust based on content */
+  max-height: 120px;  /* enough for 1–2 lines of info */
   padding: 5px 5px;
 }
+
 
 </style>
   @media (max-width: 768px) {
