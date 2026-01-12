@@ -510,7 +510,18 @@ body {
   }
 }
 
- 
+ .socials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 60px;   /* space from friends */
+  margin-bottom: 150px; /* allow scrolling */
+  font-size: 100px;    /* desktop size */
+  z-index: 10;
+  position: relative;  /* make sure it’s not absolute/fixed */
+}
+
 
 /* Mobile / Tablet */
 @media (max-width: 768px) {
@@ -860,7 +871,6 @@ body {
   <a href="https://www.artstation.com/princeari315234" target="_blank" title="ArtStation">🎨</a>
   <a href="tel:+775-686-9734" title="Call me">📞</a>
 </div>
-
 
 <!-- Moving text -->
 <div class="moving-text top">✨Prince Ari Lives!✨</div>
