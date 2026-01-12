@@ -520,6 +520,70 @@ body {
     0 0 35px #00ff00,
     0 0 50px #00ff00;
 }
+/* Socials Section Title */
+.socials-title {
+  text-align: center;
+  font-family: 'UnifrakturCook', cursive; /* match your site font */
+  font-size: 48px;
+  color: #00ff00;
+  text-shadow: 
+    1px 1px 0 #000,
+    -1px 1px 0 #000,
+    0 0 10px #00ff00,
+    0 0 20px #ff00ff;
+  position: relative;
+  z-index: 10;
+  margin: 40px 0 30px; /* adds space above and below title */
+}
+
+/* Socials Buttons */
+.socials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  font-size: 100px; /* desktop size */
+  z-index: 10;
+  margin-bottom: 150px; /* adds buffer so friends glow doesn't overlap */
+  pointer-events: none;  /* makes them not clickable */
+}
+
+/* Social icons styling */
+.socials a {
+  color: #ff00ff; 
+  text-decoration: none;
+  text-shadow: 
+    0 0 10px #ff00ff,
+    0 0 20px #ff00ff,
+    0 0 30px #00ff00,
+    0 0 40px #00ff00;
+  transition: all 0.3s ease;
+  pointer-events: none; /* disables clicking */
+}
+
+/* Glow effect on hover - desktop only */
+.socials a:hover {
+  color: #00ff00;
+  text-shadow: 
+    0 0 15px #ff00ff,
+    0 0 25px #ff00ff,
+    0 0 35px #00ff00,
+    0 0 50px #00ff00;
+  transform: scale(1.5);
+}
+
+/* Responsive sizes */
+@media (max-width: 1200px) {
+  .socials { font-size: 70px; gap: 30px; margin-bottom: 120px; }
+}
+
+@media (max-width: 768px) {
+  .socials { font-size: 60px; gap: 25px; margin-bottom: 100px; }
+}
+
+@media (max-width: 480px) {
+  .socials { font-size: 36px; gap: 15px; margin-bottom: 80px; }
+}
 
 /* Mobile adjustments */
 @media (max-width: 1200px) {
@@ -896,17 +960,17 @@ body {
 </div> <!-- END of friend-grid -->
 </div> <!-- END of friends section -->
 
-<!-- Separator / Socials Title -->
+<!-- Title above socials -->
 <h2 class="socials-title glow">Connect with Me</h2>
 
 <!-- Socials -->
 <div class="socials glow">
-  <a href="https://x.com/AcidPrince24" target="_blank" title="Twitter/X">🐦</a>
-  <a href="https://www.instagram.com/suicidalprince_13/" target="_blank" title="Instagram">📸</a>
-  <a href="https://tiktok.com/@aidenari" target="_blank" title="TikTok">🎵</a>
-  <a href="https://www.youtube.com/@loverboyn-n-SoupBrain" target="_blank" title="YouTube">▶️</a>
-  <a href="https://www.artstation.com/princeari315234" target="_blank" title="ArtStation">🎨</a>
-  <a href="tel:+775-686-9734" title="Call me">📞</a>
+  <a href="#" title="Twitter/X">🐦</a>
+  <a href="#" title="Instagram">📸</a>
+  <a href="#" title="TikTok">🎵</a>
+  <a href="#" title="YouTube">▶️</a>
+  <a href="#" title="ArtStation">🎨</a>
+  <a href="#" title="Call me">📞</a>
 </div>
 
 <!-- Moving text -->
