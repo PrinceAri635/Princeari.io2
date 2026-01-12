@@ -451,52 +451,48 @@ body {
 
 
 /* Socials Section Glow & Hover */
-.socials {
-  position: relative;       /* keep it in the normal flow */
-  margin: 40px auto 120px;  /* spacing */
-  display: flex;
-  justify-content: center;
-  gap: 35px;               /* space between icons */
-  font-size: 64px;          /* bigger icons */
-  z-index: 2;
-  flex-wrap: wrap;          /* wrap for smaller screens */
-}
-
-.socials a {
-  text-decoration: none;
-  color: #ff00ff;
-  transition: all 0.3s ease;
-  text-shadow: 0 0 8px #ff00ff, 0 0 16px #00ff00; /* neon glow */
-}
-
-.socials a:hover {
-  color: #00ff00;
-  text-shadow: 0 0 16px #ff00ff, 0 0 24px #00ff00;
-  transform: scale(1.3);
-}
 /* Socials Section */
 .socials {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;       /* wrap on smaller screens */
-  gap: 35px;
-  margin: 50px auto 150px;  /* pushes it below friends and allows scrolling */
-  font-size: 64px;          /* large icons */
-  z-index: 2;
+  flex-wrap: wrap;        /* wrap icons on smaller screens */
+  gap: 40px;
+  margin: 60px auto 150px; /* pushes below friends section */
+  font-size: 80px;         /* bigger icons */
+  z-index: 10;             /* make sure they're on top */
 }
 
 .socials a {
   text-decoration: none;
-  color: #ff00ff;
+  color: #ff00ff; 
   transition: all 0.3s ease;
-  text-shadow: 0 0 8px #ff00ff, 0 0 16px #00ff00; /* neon glow */
+  text-shadow: 
+    0 0 10px #ff00ff,
+    0 0 20px #ff00ff,
+    0 0 30px #00ff00,
+    0 0 40px #00ff00; /* strong neon glow */
 }
 
 .socials a:hover {
   color: #00ff00;
-  text-shadow: 0 0 16px #ff00ff, 0 0 24px #00ff00;
-  transform: scale(1.3);
+  text-shadow: 
+    0 0 15px #ff00ff,
+    0 0 25px #ff00ff,
+    0 0 35px #00ff00,
+    0 0 50px #00ff00;
+  transform: scale(1.4); /* bigger on hover */
 }
+
+/* Mobile / Tablet */
+@media (max-width: 768px) {
+  .socials {
+    font-size: 60px;       /* shrink for phones */
+    gap: 25px;
+    margin: 40px auto 120px; 
+  }
+}
+
+ 
 
 /* Mobile / Tablet */
 @media (max-width: 768px) {
