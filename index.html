@@ -445,30 +445,40 @@ body {
   .friend-info {
     font-size: 14px;
   }
-
-  /* Socials */
 /* Socials Section Glow & Hover */
 .socials {
-  margin: 40px auto 120px;
+  position: relative;       /* keep it in the normal flow */
+  margin: 40px auto 120px;  /* spacing */
   display: flex;
   justify-content: center;
-  gap: 25px;
-  font-size: 48px; /* bigger icons */
+  gap: 35px;               /* space between icons */
+  font-size: 64px;          /* bigger icons */
   z-index: 2;
+  flex-wrap: wrap;          /* wrap for smaller screens */
 }
 
 .socials a {
   text-decoration: none;
   color: #ff00ff;
   transition: all 0.3s ease;
-  text-shadow: 0 0 6px #ff00ff, 0 0 12px #00ff00;
+  text-shadow: 0 0 8px #ff00ff, 0 0 16px #00ff00; /* neon glow */
 }
 
 .socials a:hover {
   color: #00ff00;
-  text-shadow: 0 0 12px #ff00ff, 0 0 18px #00ff00;
-  transform: scale(1.2);
+  text-shadow: 0 0 16px #ff00ff, 0 0 24px #00ff00;
+  transform: scale(1.3);
 }
+
+/* Mobile/Tablet Responsive */
+@media (max-width: 768px) {
+  .socials {
+    font-size: 48px;    /* shrink icons slightly on small screens */
+    gap: 20px;
+    margin: 30px auto 80px;
+  }
+}
+
 
 /* Mobile/Tablet Responsive */
 @media (max-width: 768px) {
