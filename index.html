@@ -620,21 +620,6 @@ body {
   position: relative;  /* make sure it’s not absolute/fixed */
 }
 
-/* Thank You Section */
-.thank-you {
-  text-align: center;
-  font-family: 'UnifrakturCook', cursive;
-  font-size: 36px;
-  color: #00ff00;
-  text-shadow:
-    1px 1px 0 #000,
-    -1px 1px 0 #000,
-    0 0 10px #00ff00,
-    0 0 20px #ff00ff;
-  margin: 50px 20px 100px; /* space above and below */
-  z-index: 10;
-}
-
 /* Mobile / Tablet */
 @media (max-width: 768px) {
   .socials {
@@ -678,6 +663,21 @@ body {
     font-size: 22px;
     gap: 10px;
   }
+}
+/* Thank You Section */
+.thank-you {
+  position: relative;       /* ensures it stacks normally in flow */
+  z-index: 100;             /* above most other content */
+  text-align: center;
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 36px;
+  color: #00ff00;
+  text-shadow:
+    1px 1px 0 #000,
+    -1px 1px 0 #000,
+    0 0 10px #00ff00,
+    0 0 20px #ff00ff;
+  margin: 80px 20px 150px;  /* space above and below */
 }
 
 </style>
