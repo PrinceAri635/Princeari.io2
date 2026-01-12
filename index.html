@@ -361,24 +361,23 @@ body {
 }
 
 /* Friends */
-..friend-card-anim { 
-  position: relative;
+.friend-card-anim {
   width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  cursor: pointer;
+}
+
+/* Image hover zoom */
+.friend-card-anim img {
+  width: 100%;
   height: 250px;
-  overflow: hidden;
+  object-fit: cover;
   border-radius: 15px;
   border: 2px solid #00ff00;
   box-shadow: 0 0 10px #ff00ff;
-  margin: 20px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.friend-card-anim img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1);
   transition: transform 1s ease, filter 1s ease;
 }
 
@@ -387,37 +386,33 @@ body {
   filter: drop-shadow(0 0 15px #ff00ff) drop-shadow(0 0 15px #00ff00);
 }
 
-/* Static name above hover info */
+/* Name always visible below image */
 .friend-name-static {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-  color: #00ff00;
+  margin-top: 10px;
   font-family: 'UnifrakturCook', cursive;
   font-size: 18px;
-  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 0 0 6px #00ff00;
+  color: #00ff00;
+  text-shadow: 1px 1px 2px #000, -1px -1px 2px #000;
   text-align: center;
-  z-index: 2;
-  pointer-events: none;
 }
 
-/* Hover info */
+/* About info hidden by default */
 .friend-info {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.6);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 14px;
   color: #ff00ff;
   text-align: center;
-  padding: 10px;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  font-family: 'UnifrakturCook', cursive;
-  z-index: 3;
+  padding: 0 5px;
+  margin-top: 5px;
 }
 
+/* Expand info on hover */
 .friend-card-anim:hover .friend-info {
-  opacity: 1;
+  max-height: 100px; /* adjust based on content */
+  padding: 5px 5px;
 }
 
 </style>
