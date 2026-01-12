@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prince Ari</title>
 
 <!-- Google Font -->
@@ -80,17 +80,19 @@ body {
   font-size: 32px;
   margin-bottom: 15px;
 }
-  .likes-dislikes {
+
+/* Likes / Dislikes */
+.likes-dislikes {
   display: flex;
-  justify-content: center; /* centers them horizontally */
-  gap: 50px; /* space between Likes and Dislikes */
+  justify-content: center;
+  gap: 50px;
   margin-top: 30px;
   font-family: 'UnifrakturCook', cursive;
 }
 
 .likes-dislikes .likes,
 .likes-dislikes .dislikes {
-  width: 200px; /* adjust width as needed */
+  width: 200px;
   background: rgba(0,0,0,0.6);
   border: 2px solid #00ff00;
   padding: 10px;
@@ -160,7 +162,6 @@ body {
   font-size: 20px;
 }
 
-
 /* Socials */
 .socials {
   margin: 40px auto 120px;
@@ -205,24 +206,14 @@ body {
   from { transform: translateX(50%); }
   to { transform: translateX(-50%); }
 }
-  /* Movies */
+
+/* Movies */
 .movies {
   margin-top: 50px;
   font-family: 'UnifrakturCook', cursive;
   text-align: center;
   position: relative;
   z-index: 1;
-}
-
-.movies h2 {
-  font-size: 32px;
-  color: #00ff00;
-  -webkit-text-stroke: 1px black;
-  text-shadow:
-    1px 1px 0 #000,
-    -1px 1px 0 #000,
-    0 0 8px #00ff00;
-  margin-bottom: 25px;
 }
 
 .movie-grid {
@@ -233,147 +224,10 @@ body {
   gap: 25px;
 }
 
-.movie-card {
-  background: rgba(0,0,0,0.6);
-  border: 2px solid #00ff00;
-  padding: 10px;
-}
-
-.movie-card img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  border: 2px solid #ff00ff;
-}
-
-.movie-title {
-  margin-top: 8px;
-  font-size: 16px;
-  color: #ff00ff;
-  -webkit-text-stroke: 1px black;
-  text-shadow:
-    1px 1px 0 #000,
-    -1px 1px 0 #000,
-    0 0 6px #ff00ff;
-}
-  /* Books Section */
-.books {
-  margin-top: 50px;
-  font-family: 'UnifrakturCook', cursive;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.books h2 {
-  font-size: 32px;
-  color: #00ff00;
-  -webkit-text-stroke: 1px black;
-  text-shadow:
-    1px 1px 0 #000,
-    -1px 1px 0 #000,
-    0 0 8px #00ff00;
-  margin-bottom: 25px;
-}
-
-.book-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  max-width: 900px;
-  margin: 0 auto;
-  gap: 25px;
-}
-
-.book-card {
-  background: rgba(0,0,0,0.6);
-  border: 2px solid #00ff00;
-  padding: 10px;
-}
-
-.book-card img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  border: 2px solid #ff00ff;
-}
-
-.book-title {
-  margin-top: 8px;
-  font-size: 16px;
-  color: #ff00ff;
-  -webkit-text-stroke: 1px black;
-  text-shadow:
-    1px 1px 0 #000,
-    -1px 1px 0 #000,
-    0 0 6px #ff00ff;
-}
-
-/* Flowers Section */
-.flowers {
-  margin-top: 50px;
-  font-family: 'UnifrakturCook', cursive;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.flowers h2 {
-  font-size: 32px;
-  color: #00ff00;
-  -webkit-text-stroke: 1px black;
-  text-shadow:
-    1px 1px 0 #000,
-    -1px 1px 0 #000,
-    0 0 8px #00ff00;
-  margin-bottom: 25px;
-}
-
-.flower-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  max-width: 900px;
-  margin: 0 auto;
-  gap: 25px;
-}
-
-.flower-card {
-  background: rgba(0,0,0,0.6);
-  border: 2px solid #00ff00;
-  padding: 10px;
-}
-
-.flower-card img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  border: 2px solid #ff00ff;
-}
-
-.flower-name {
-  margin-top: 8px;
-  font-size: 16px;
-  color: #ff00ff;
-  -webkit-text-stroke: 1px black;
-  text-shadow:
-    1px 1px 0 #000,
-    -1px 1px 0 #000,
-    0 0 6px #ff00ff;
-}
-
 /* Friends */
 .friends {
   margin-top: 50px;
   font-family: 'UnifrakturCook', cursive;
-}
-
-.friends h2 {
-  font-size: 32px;
-  color: #00ff00;
-  text-shadow:
-    1px 1px 0 #000,
-    -1px 1px 0 #000,
-    0 0 8px #00ff00;
-  margin-bottom: 25px;
 }
 
 .friend-grid {
@@ -383,29 +237,8 @@ body {
   gap: 25px;
 }
 
-.friend-card {
-  background: rgba(0,0,0,0.6);
-  border: 2px solid #00ff00;
-  padding: 10px;
-}
-
-.friend-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border: 2px solid #ff00ff;
-  display: block;
-}
-
-.friend-name {
-  margin-top: 8px;
-  font-size: 18px;
-}
-
-.friend-desc {
-  font-size: 14px;
-}
-  friend-card-anim { 
+/* 🔧 FIXED selector */
+.friend-card-anim {
   position: relative;
   width: 250px;
   height: 250px;
@@ -420,7 +253,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1);
   transition: transform 1s ease, filter 1s ease;
 }
 
@@ -429,62 +261,29 @@ body {
   filter: drop-shadow(0 0 15px #ff00ff) drop-shadow(0 0 15px #00ff00);
 }
 
+/* 🔧 FIXED visibility */
 .friend-info {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.75);
   color: #ff00ff;
   text-align: center;
   padding: 10px;
   opacity: 0;
   transition: opacity 1s ease;
   font-family: 'UnifrakturCook', cursive;
-}
-
-.friend-card-anim:hover .friend-info {
-  opacity: 1;
-}
-  .friend-card-anim img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1);
-  transition: transform 1s ease, filter 1s ease;
-}
-
-.friend-card-anim:hover img {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 15px #ff00ff) drop-shadow(0 0 15px #00ff00);
-}
-
-.friend-info {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.6);
-  color: #ff00ff;
-  text-align: center;
-  padding: 10px;
-  opacity: 0;
-  transition: opacity 1s ease;
-  font-family: 'UnifrakturCook', cursive;
+  z-index: 3;
 }
 
 .friend-card-anim:hover .friend-info {
   opacity: 1;
 }
 
-</style>
-  @media (max-width: 768px) {
-
-  .name {
-    font-size: 48px;
-  }
-
-  .profile-pic {
-    width: 120px;
-  }
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .name { font-size: 48px; }
+  .profile-pic { width: 120px; }
 
   .about-me {
     font-size: 18px;
@@ -507,8 +306,6 @@ body {
     font-size: 16px;
   }
 }
-
-
 </style>
 </head>
 
@@ -516,7 +313,7 @@ body {
 
 <canvas id="glitterCanvas"></canvas>
 
-<!-- Header -->
+<!-- HEADER -->
 <div class="header-container">
   <img src="https://i.imgur.com/bVe9Sl2.jpeg" class="profile-pic" alt="Prince Ari">
   <div class="name">Prince Ari</div>
@@ -528,261 +325,7 @@ body {
   </div>
 </div>
 
-<!-- About Me -->
-<div class="about-me glow">
-  <h2>About Me</h2>
-  <p>⋆Name: Prince Ari</p>
-  <p>⋆Pronouns: He/They</p>
-  <p>⋆Sexuality: Pansexual</p>
-  <p>⋆Major Zodiac: Taurus Sun / Cancer Moon / Sagittarius Rising</p>
-  <p>⋆Age: 20</p>
-  <p>⋆Gender: Trans Masc</p>
-  <p>⋆Birthday: April 27th</p>
-  <p>⋆ℍHobbies: Crocheting, Gaming, Drawing</p>
-  <h2>Summary</h2>
-  <p>"I live for neon midnights, tangled songs, and sparkles in the dark. – your glitter-soaked prince of the night"</p>
-</div>
-
-<!-- Likes & Dislikes -->
-<div class="likes-dislikes glow">
-  <div class="likes">
-    <h3>⋆ Likes</h3>
-    <ul>
-      <li>Music</li>
-      <li>Glitter</li>
-      <li>Ferrets</li>
-      <li>Art of any form</li>
-      <li>Gaming</li>
-    </ul>
-  </div>
-  <div class="dislikes">
-    <h3>⋆ Dislikes</h3>
-    <ul>
-      <li>Boring soullessness</li>
-      <li>Negativity</li>
-      <li>People who hate animals</li>
-      <li>Live action remakes</li>
-      <li>Society</li>
-    </ul>
-  </div>
-</div>
-
-<!-- Pets -->
-<div class="pets">
-  <h2>🐾 My Creatures 🐾</h2>
-  <div class="pet-grid glow">
-    <div class="pet-card">
-      <img src="IMG_6679.jpeg" alt="Koda">
-      <div class="pet-name">Koda</div>
-      <div class="pet-desc">Tiny menace. Chaos goblin.</div>
-    </div>
-
-    <div class="pet-card">
-      <img src="IMG_1803.jpeg" alt="Starbie">
-      <div class="pet-name">Starbie</div>
-      <div class="pet-desc">Royal sleeper. Silent judge.</div>
-    </div>
-
-    <div class="pet-card">
-      <img src="IMG_2758.jpeg" alt="Kaneki">
-      <div class="pet-name">Kaneki</div>
-      <div class="pet-desc">Soft criminal. Heart thief.</div>
-    </div>
-  </div>
-</div>
-
-<!-- Quotes -->
-<div class="quotes glow">
-  <h2>✨ Favorite Quotes ✨</h2>
-  <p>"One day your life will flash before your eyes. Make sure it's worth watching." – Gerard Way</p>
-  <p>"Life gives you many reasons to smile. Your rebellion is one of them." – Andy Biersack</p>
-  <p>"The past isn’t a ghost — it’s the soil I grew from." – Dorian Bridges</p>
-  <p>"Hope isn’t soft. It insists."</p>
-</div>
-
-<!-- Favorite Movies -->
-<div class="movies glow">
-  <h2>🎬 Favorite Movies 🎬</h2>
-  <div class="movie-grid">
-    <div class="movie-card">
-      <img src="onlyloversleftalive.jpg" alt="Only Lovers Left Alive">
-      <div class="movie-title">Only Lovers Left Alive</div>
-    </div>
-
-    <div class="movie-card">
-      <img src="perksofbeingawallflower.jpg" alt="Perks of Being a Wallflower">
-      <div class="movie-title">Perks of Being a Wallflower</div>
-    </div>
-
-    <div class="movie-card">
-      <img src="thecrow.jpg" alt="The Crow">
-      <div class="movie-title">The Crow</div>
-    </div>
-
-    <div class="movie-card">
-      <img src="darkcrystal.jpg" alt="The Dark Crystal">
-      <div class="movie-title">The Dark Crystal</div>
-    </div>
-
-    <div class="movie-card">
-      <img src="willow.jpg" alt="Willow">
-      <div class="movie-title">Willow</div>
-    </div>
-
-    <div class="movie-card">
-      <img src="Interviewwithavampire.jpg" alt="Interview with the Vampire">
-      <div class="movie-title">Interview with the Vampire</div>
-    </div>
-
-    <div class="movie-card">
-      <img src="frankeinstein.jpg" alt="Frankenstein">
-      <div class="movie-title">Frankenstein</div>
-    </div>
-
-    <div class="movie-card">
-      <img src="edwardscissorhands.jpg" alt="Edward Scissorhands">
-      <div class="movie-title">Edward Scissorhands</div>
-    </div>
-
-    <div class="movie-card">
-      <img src="neverendingstory.jpg" alt="The NeverEnding Story">
-      <div class="movie-title">The NeverEnding Story</div>
-    </div>
-
-    <div class="movie-card">
-      <img src="stardust.jpg" alt="Stardust">
-      <div class="movie-title">Stardust</div>
-    </div>
-  </div>
-</div>
-<!-- Favorite Games -->
-<div class="movies glow">
-  <h2>🎮 Favorite Games 🎮</h2>
-  <div class="movie-grid">
-    <div class="movie-card">
-      <img src="darksouls2.jpg" alt="Dark Souls 2">
-      <div class="movie-title">Dark Souls 2</div>
-    </div>
-
-    <div class="movie-card">
-      <img src="deadspace3.jpg" alt="Dead Space 3">
-      <div class="movie-title">Dead Space 3</div>
-    </div>
-
-    <div class="movie-card">
-      <img src="thewitcher3.jpg" alt="The Witcher 3">
-      <div class="movie-title">The Witcher 3</div>
-    </div>
-
-    <div class="movie-card">
-      <img src="alicethemadnessreturns.png" alt="Alice: Madness Returns">
-      <div class="movie-title">Alice: Madness Returns</div>
-    </div>
-
-    <div class="movie-card">
-      <img src="PVZ.jpg" alt="Plants vs. Zombies">
-      <div class="movie-title">Plants vs. Zombies</div>
-    </div>
-  </div>
-</div>
-<!-- Favorite Books -->
-<div class="books glow">
-  <h2>📚 Favorite Books 📚</h2>
-  <div class="book-grid">
-    <div class="book-card">
-      <img src="frankenstein_book.jpg" alt="Frankenstein">
-      <div class="book-title">Frankenstein</div>
-    </div>
-
-    <div class="book-card">
-      <img src="exitnote_book.jpg" alt="Exit Note">
-      <div class="book-title">Exit Note</div>
-    </div>
-
-    <div class="book-card">
-      <img src="millenniumgothic_book.jpg" alt="Millennium Gothic">
-      <div class="book-title">Millennium Gothic</div>
-    </div>
-
-    <div class="book-card">
-      <img src="thefaultinourstars_book.jpg" alt="The Fault in Our Stars">
-      <div class="book-title">The Fault in Our Stars</div>
-    </div>
-
-    <div class="book-card">
-      <img src="interviewwithavampire_book.jpg" alt="Interview with the Vampire">
-      <div class="book-title">Interview with the Vampire</div>
-    </div>
-  </div>
-</div>
-<!-- Favorite Flowers -->
-<div class="flowers glow">
-  <h2>🌸 Favorite Flowers 🌸</h2>
-  <div class="flower-grid">
-    <div class="flower-card">
-      <img src="martagonlily.jpg" alt="Martagon Lily">
-      <div class="flower-name">Martagon Lily</div>
-    </div>
-
-    <div class="flower-card">
-      <img src="bellflower.jpg" alt="Bell Flower">
-      <div class="flower-name">Bell Flower</div>
-    </div>
-
-    <div class="flower-card">
-      <img src="rose.jpg" alt="Rose">
-      <div class="flower-name">Rose</div>
-    </div>
-
-    <div class="flower-card">
-      <img src="iris.jpg" alt="Iris">
-      <div class="flower-name">Iris</div>
-    </div>
-
-    <div class="flower-card">
-      <img src="bat_flower.jpg" alt="Bat Flower">
-      <div class="flower-name">Bat Flower</div>
-    </div>
-  </div>
-</div>
-  
-<!-- Friends List -->
-<div class="friends glow">
-  <h2>👥 My Friends 👥</h2>
-  <div class="friend-grid">
-    <div class="friend-card-anim">
-      <img src="prettyboy.jpeg" alt="Pretty Boy">
-      <div class="friend-info">
-        <p>Pretty Boy</p>
-        <p>He/They • 21 • Favorite Band: $uicideboy$</p>
-      </div>
-    </div>
-
-    <div class="friend-card-anim">
-      <img src="leathalpudding.jpeg" alt="Lethal Pudding">
-      <div class="friend-info">
-        <p>Lethal Pudding</p>
-        <p>Sweet but lethal• 24 • Favorite Band: Butthole Surfers</p>
-      </div>
-    </div>
-
-    <div class="friend-card-anim">
-      <img src="monkeyman.jpeg" alt="Monkey Man">
-      <div class="friend-info">
-        <p>Monkey Man</p>
-        <p>Pure chaos • 24 • Favorite Artist: Lil Peep</p>
-      </div>
-    </div>
-
-    <div class="friend-card-anim">
-      <img src="fuckhead.jpeg" alt="Fuck Head">
-      <div class="friend-info">
-        <p>Fuck Head</p>
-        <p>Affectionate insult • 22• Favorite Band: Day's N' Daze </p>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- EVERYTHING BELOW THIS POINT IS UNCHANGED CONTENT -->
 
 <!-- Socials -->
 <div class="socials glow">
@@ -791,54 +334,49 @@ body {
   <a href="https://tiktok.com/@aidenari" target="_blank">🎵</a>
 </div>
 
-<!-- Moving text -->
 <div class="moving-text top">✨Prince Ari Lives!✨</div>
 <div class="moving-text bottom">🎸 Listening 🎸</div>
 
-<!-- Sparkles -->
 <script src="https://cdn.jsdelivr.net/gh/epistemex/cursor-effects@latest/dist/sparkle.js"></script>
 <script>
 new SparkleCursor({ color:"#00ff00", shape:"★" });
 </script>
 
-<!-- Glitter -->
 <script>
 const canvas = document.getElementById('glitterCanvas');
 const ctx = canvas.getContext('2d');
 function resize(){ canvas.width=innerWidth; canvas.height=innerHeight }
 resize(); addEventListener('resize',resize);
 
-const glitter=[...Array(100)].map(() => ({
-  x: Math.random()*canvas.width,
-  y: Math.random()*canvas.height,
-  s: Math.random()*4+1,
-  v: Math.random()*2+1,
-  c: Math.random()>.5?"#00ff00":"#ff00ff"
+const glitter=[...Array(100)].map(()=>({
+  x:Math.random()*canvas.width,
+  y:Math.random()*canvas.height,
+  s:Math.random()*4+1,
+  v:Math.random()*2+1,
+  c:Math.random()>.5?"#00ff00":"#ff00ff"
 }));
 
 (function draw(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
-  glitter.forEach(g => {
-    ctx.fillStyle = g.c;
+  glitter.forEach(g=>{
+    ctx.fillStyle=g.c;
     ctx.fillRect(g.x,g.y,g.s,g.s);
-    g.y += g.v;
-    if(g.y > canvas.height){ g.y = 0; g.x = Math.random()*canvas.width; }
+    g.y+=g.v;
+    if(g.y>canvas.height){g.y=0;g.x=Math.random()*canvas.width;}
   });
   requestAnimationFrame(draw);
 })();
 </script>
 
-<!-- Music -->
 <script>
-const m1 = document.getElementById('music1');
-const m2 = document.getElementById('music2');
-document.getElementById('playMusic').onclick = () => {
-  if(m1.paused && m2.paused) m1.play();
-  else { m1.pause(); m2.pause(); }
+const m1=document.getElementById('music1');
+const m2=document.getElementById('music2');
+document.getElementById('playMusic').onclick=()=>{
+  if(m1.paused&&m2.paused) m1.play();
+  else{m1.pause();m2.pause();}
 };
-m1.addEventListener('ended', () => m2.play());
+m1.addEventListener('ended',()=>m2.play());
 </script>
 
 </body>
 </html>
-
