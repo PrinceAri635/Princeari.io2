@@ -471,6 +471,20 @@ body {
     0 0 10px #00ff00,
     0 0 20px #ff00ff; /* neon glow effect */
 }
+.socials-title {
+  text-align: center;
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 48px;
+  color: #00ff00;
+  text-shadow: 
+    1px 1px 0 #000,
+    -1px 1px 0 #000,
+    0 0 10px #00ff00,
+    0 0 20px #ff00ff;
+  position: relative;   /* needed for z-index to work */
+  z-index: 10;          /* make sure it sits above backgrounds and canvas */
+  margin: 40px 0 20px;  /* spacing from friends above and socials below */
+}
 
 @media (max-width: 768px) {
   .socials-title {
