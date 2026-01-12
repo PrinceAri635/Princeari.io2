@@ -452,14 +452,15 @@ body {
 
 /* Socials Section Glow & Hover */
 /* Socials Section */
+./* Socials Section */
 .socials {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;        /* wrap icons on smaller screens */
+  flex-wrap: wrap;        /* wrap icons if needed */
   gap: 40px;
-  margin: 60px auto 150px; /* pushes below friends section */
-  font-size: 80px;         /* bigger icons */
-  z-index: 10;             /* make sure they're on top */
+  margin: 60px auto 150px; /* push below friends section */
+  font-size: 100px;        /* desktop size */
+  z-index: 10;
 }
 
 .socials a {
@@ -480,7 +481,24 @@ body {
     0 0 25px #ff00ff,
     0 0 35px #00ff00,
     0 0 50px #00ff00;
-  transform: scale(1.4); /* bigger on hover */
+  transform: scale(1.5); /* hover scale for desktop */
+}
+
+/* Mobile / Tablet */
+@media (max-width: 1200px) {
+  .socials {
+    font-size: 70px;       /* slightly smaller for tablets */
+    gap: 30px;
+    margin: 50px auto 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .socials {
+    font-size: 60px;       /* phone size */
+    gap: 25px;
+    margin: 40px auto 100px;
+  }
 }
 
 /* Mobile / Tablet */
