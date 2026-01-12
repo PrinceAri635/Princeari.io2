@@ -469,6 +469,39 @@ body {
   text-shadow: 0 0 16px #ff00ff, 0 0 24px #00ff00;
   transform: scale(1.3);
 }
+/* Socials Section */
+.socials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;       /* wrap on smaller screens */
+  gap: 35px;
+  margin: 50px auto 150px;  /* pushes it below friends and allows scrolling */
+  font-size: 64px;          /* large icons */
+  z-index: 2;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #ff00ff;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 8px #ff00ff, 0 0 16px #00ff00; /* neon glow */
+}
+
+.socials a:hover {
+  color: #00ff00;
+  text-shadow: 0 0 16px #ff00ff, 0 0 24px #00ff00;
+  transform: scale(1.3);
+}
+
+/* Mobile / Tablet */
+@media (max-width: 768px) {
+  .socials {
+    font-size: 48px;
+    gap: 20px;
+    margin: 40px auto 100px; /* adjusts spacing on smaller screens */
+  }
+}
+
 
 /* Mobile/Tablet Responsive */
 @media (max-width: 768px) {
