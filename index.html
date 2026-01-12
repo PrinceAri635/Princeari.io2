@@ -423,6 +423,44 @@ body {
   padding: 5px 5px;
 }
 
+/* Responsive friend cards */
+.friend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.friend-card-anim {
+  width: 100%;
+  max-width: 250px;
+  height: auto; /* let height adjust automatically */
+}
+
+.friend-card-anim img {
+  height: 180px; /* or auto if you want it fully responsive */
+  object-fit: cover;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .friend-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+
+  .friend-card-anim img {
+    height: 150px;
+  }
+
+  .friend-name-static {
+    font-size: 16px;
+  }
+
+  .friend-info {
+    font-size: 14px;
+  }
+}
 
 </style>
  
