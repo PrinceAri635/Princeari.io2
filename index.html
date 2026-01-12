@@ -161,21 +161,6 @@ body {
 }
 
 
-/* Socials */
-.socials {
-  margin: 40px auto 120px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  font-size: 32px;
-  z-index: 2;
-}
-
-.socials a {
-  text-decoration: none;
-  color: inherit;
-}
-
 /* Moving text */
 .moving-text {
   position: fixed;
@@ -461,14 +446,12 @@ body {
     font-size: 14px;
   }
 
-
-}
+  /* Socials */
 .socials {
   margin: 40px auto 120px;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;       /* allows icons to move to the next line on small screens */
-  gap: 15px;             /* space between icons */
+  gap: 20px;
   font-size: 32px;
   z-index: 2;
 }
@@ -476,18 +459,34 @@ body {
 .socials a {
   text-decoration: none;
   color: inherit;
-  transition: transform 0.2s ease;
+}
+.socials {
+  margin: 40px auto 120px;  /* keeps it far below other sections */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;          /* wrap on small screens */
+  gap: 20px;
+  font-size: 32px;
+  z-index: 2;
+  clear: both;              /* ensures it starts below floated/gridded content */
+}
+
+.socials a {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, text-shadow 0.2s ease;
 }
 
 .socials a:hover {
-  transform: scale(1.3);  /* grows slightly when hovered */
+  transform: scale(1.3);            /* grows slightly */
+  text-shadow: 0 0 10px #ff00ff, 0 0 15px #00ff00;  /* glow effect */
 }
 
-/* Responsive for tablets and phones */
+/* Responsive */
 @media (max-width: 768px) {
   .socials {
     font-size: 26px;
-    gap: 12px;
+    gap: 15px;
   }
 }
 
